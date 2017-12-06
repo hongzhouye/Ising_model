@@ -11,6 +11,8 @@ make
 ```
 An executable `mc` will be generated in the same directory.
 
+_Note: Unfortunately the author is not familiar with Windows OS and therefore it does not support windows currently. For Windows cmd expert, it is very easy to write a batch file to mimic the funcitonality of_ `Makefile`.
+
 A sample input file is provided in `input/inp`, which is pretty self-explainary. It can be ran as follows
 ```
 ./mc input/inp
