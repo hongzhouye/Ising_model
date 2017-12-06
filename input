@@ -1,0 +1,39 @@
+# This is a sample input file.
+# Any line starting with an octothorp is treated as a comment line.
+
+# L: dimension of 2D square lattice
+L = 50
+
+# T: Simulation temperature
+# H: External magnetic field
+T = 2.3
+H = 0.
+
+# MaxStep: How long does this simulation run?
+# AveStep: How many steps are used to compute
+#          ensemble averages?
+# Both are in the unit of Monte-Carlo Sweep (MCS)
+MaxStep = 1E4
+AveStep = 3E3
+
+# How do we initialize the lattice?
+# 1: random
+# 2: all ones
+# 3: all minus ones
+init_lat_type = 2
+
+# M_ave: If true, the ensemble average of magnetization
+#        is evaluated over AveStep steps.
+# X_ave: If true, the ensemble average of magnetic
+#        susceptiblity is evaluated over AveStep steps.
+#        Note that this is very slow in the current 
+#        implementation, so turn it off if it's not needed.
+M_ave = true
+X_ave = true
+
+# write_traj: If true, trajectory is written to file.
+# write_to  : Where is trajectory written to?
+# write_freq: How frequently does this happen? (in MCS)
+write_traj = true
+write_to = output.txt
+write_freq = 10
