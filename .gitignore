@@ -34,3 +34,7 @@
 # output
 *.dat
 *.txt
+
+# executables
+*.out
+mc
