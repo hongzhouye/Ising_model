@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <cmath>
+#include <iostream>
 
 
 using namespace std;
@@ -11,6 +12,7 @@ typedef vector<int> iv1;
 typedef vector<iv1> iv2;
 typedef vector<double> dv1;
 typedef vector<dv1> dv2;
+typedef vector<string> vs;
 
 
 template <class T>

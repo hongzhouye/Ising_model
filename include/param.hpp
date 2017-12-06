@@ -4,8 +4,6 @@
 
 #include "utils.hpp"
 
-using namespace std;
-
 
 class PARAM
 {
@@ -16,21 +14,21 @@ class PARAM
         long int MaxStep;   // max Monte-Carlo step
 		long int AveStep;
         iv2 S;      // lattice
+        int init_lat_type;  // 1: random; 2: all ones; 3: all minus ones
 
         dv1 M_siteave;   // site averaged magnetization (length: MaxStep)
 
+        bool iM_ave, iX_ave;
         double m_ave;   // ensemble averaged magnetization
         dv2 S_ave, S2_ave;  // ensemble averaged S and S*S
         double X_ave;
 
+        bool iwrite_traj;
+        string write_to;
         int write_freq;
-        string outfile;
 
         PARAM() = default;
 		PARAM(const string& fname);
-        PARAM(const int l, const double t, const double h,
-            const long int maxstep, long int avestep,
-        	const int init_lat_type, const int wf, const string& out);
 
         void kernel();
         void average();
