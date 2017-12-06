@@ -14,8 +14,7 @@ int main(int argc, char *argv[])
     // initialize random number generator
     init_rng(time(0));
 
-    // set up parameters in order
-    // L, T, H, MaxStep, init_lat_type
+    // read parameters from file
     PARAM p = PARAM(string(argv[1]));
 
     // run
