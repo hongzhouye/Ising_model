@@ -5,6 +5,9 @@
 
 
 PARAM::PARAM(const string& fname)
+/* Constructor. It takes a string of input file name, reads parameters
+ * from it and initialize a PARAM instance.
+ */
 {
 	read_param(this, fname);
 	S = iv2(L, iv1(L, 0));
@@ -18,6 +21,10 @@ PARAM::PARAM(const string& fname)
 
 
 void init_lat(iv2& S, const int init_lat_type)
+/* A stand-alone function to initialize a 2D square lattice.
+ * :var:`init_lat_type` can be either 1 (random), 2 (all ones)
+ * or 3 (all minus ones).
+ */
 {
     if (init_lat_type == 1)
         for(int i = 0; i < S.size(); i++)
@@ -34,6 +41,7 @@ void init_lat(iv2& S, const int init_lat_type)
 
 
 void PARAM::kernel()
+// Kernel function that performs the Monte-Carlo simulation.
 {
 	FILE *p = NULL;
 	if (iwrite_traj)
